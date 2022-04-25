@@ -18,7 +18,7 @@ function renderData(schools) {
       (school, i) =>
         `<div class="col">
         <div class="card shadow-sm">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src = "https://cdn.britannica.com/85/13085-050-C2E88389/Corpus-Christi-College-University-of-Cambridge-England.jpg"></img>
+          <img class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src = "https://future.mcmaster.ca/wp-content/uploads/2020/07/CAP_0454universityhallsummer_jpg.jpg"></img>
 
           <div class="card-body">
             <li class = "university">${school.name}</li>

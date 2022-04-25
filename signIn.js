@@ -35,7 +35,7 @@ function signIn(userData) {
 }
 
   function reDirectSignIn() {
-    window.location.href = "HomepageAfterSignin.html"
+    window.location.href = "homepageAfterSignin.html"
   }
   
   form.addEventListener("submit", (e) => {

@@ -65,7 +65,7 @@ confirmPassword: document.getElementById('confirmPassword').value,
 })
 
 function reDirect() {
-  window.location.href = "Sign In.html"
+  window.location.href = "signIn.html"
 }
 
 

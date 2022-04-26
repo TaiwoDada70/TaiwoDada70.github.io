@@ -34,7 +34,7 @@ function renderData(schools) {
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <button type="button" class="btn btn-sm btn-outline-secondary">More info</button>
-                <button type="submit" onclick = "window.localStorage.setItem("name", ${school.name})" class="btn btn-sm btn-outline-secondary"><a href="Update a school.html">Update</a></button>
+                <button type="submit" onclick = "window.localStorage.setItem("name", ${school.name})" class="btn btn-sm btn-outline-secondary"><a href="updateASchool.html">Update</a></button>
                 <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
               </div>
               <small class="text-muted">9 mins</small>

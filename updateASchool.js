@@ -13,19 +13,17 @@ var short_desc = document.getElementById('short_desc').value
 var form = document.getElementById('container')
 const button = document.getElementById("btn-submit");
 
-function updateASchool(newData) {
+function updateASchool(id) {
     const token = window.localStorage.getItem('token')
-    const id = window.localStorage.getItem(school.id)
-    console.log (id)
     console.log(token)
     //console.log(document.getElementById('id'))
-    fetch(`${apiUrl}/api/schools/${school.id}`, {
+    fetch(`${apiUrl}/api/schools/${id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
         "Authorization": `Bearer ${token}`
       },
-      body:JSON.stringify(newData)
+      body:JSON.stringify(id)
     })
       .then((response) => {if (response.ok) {
       return response.json()
@@ -40,6 +38,10 @@ function updateASchool(newData) {
     console.log(error)
     })
   }
+
+  // function reDirectId (id) {
+  //   window.localStorage.setItem("id", id);
+  // }
 
 //   function addASchool(newData) {
 //     fetch(`${apiUrl}/api/schools/add`, {
@@ -76,17 +78,17 @@ form.addEventListener("submit", (e) => {
         total_enrollment : document.getElementById('total_enrollment').value,
         short_desc : document.getElementById('short_desc').value
     }
-      updateASchool(newData);    
+      updateASchool(id);    
 })
 
 function reDirect() {
-    window.location.href = "homepageAfterSignin.html"
+    window.location.href = "aftersignin.html"
 }
 
-function saveToken(token) {
-    console.log(token)
-    window.localStorage.setItem("token", token);
-}
+// function saveToken(token) {
+//     console.log(token)
+//     window.localStorage.setItem("token", token);
+// }
 
 // function saveId(identification) {
 //     console.log(document.getElementById('id'))

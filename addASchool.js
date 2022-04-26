@@ -77,7 +77,7 @@ form.addEventListener("submit", (e) => {
 })
 
 function reDirect() {
-    window.location.href = "homepageAfterSignin.html"
+    window.location.href = "aftersignin.html"
 }
 
 function saveToken(token) {

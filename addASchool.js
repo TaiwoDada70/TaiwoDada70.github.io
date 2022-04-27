@@ -78,6 +78,7 @@ form.addEventListener("submit", (e) => {
 
 function reDirect() {
     window.location.href = "aftersignin.html"
+    console.log("school added successfully")
 }
 
 function saveToken(token) {

@@ -50,6 +50,7 @@ function renderData(schools) {
 
 const deleteASchool = (id) => {
   const token = window.localStorage.getItem('token')
+  console.log(id)
     console.log(token)
     fetch(`${apiUrl}/api/schools/${id}`, {
       method: "DELETE",

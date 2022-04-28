@@ -7,18 +7,6 @@ var confirmPassword = document.getElementById('confirmPassword').value
 var form = document.getElementById('container')
 const button = document.getElementById("btn-submit");
 
-// function signUp(data) {
-//     fetch(`${apiUrl}/api/users/signup`, {
-//       method: "POST",
-//       body: JSON.stringify(data),
-//       headers: {
-//         "Content-type": "application/json; charset=UTF-8"
-//       },
-//     })
-//       .then((response) => response.json())
-//       .then((json) => saveToken(json.token));
-// }
-
 function signUp(data) {
   fetch(`${apiUrl}/api/users/signup`, {
     method: "POST",
@@ -69,10 +57,5 @@ function reDirect() {
 }
 
 
-// const token = getToken()
-// console.log(token)
-//onclick = "reDirect()"
 
-
-//Sign In Code
 

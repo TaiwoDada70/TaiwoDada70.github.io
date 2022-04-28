@@ -38,26 +38,6 @@ function addASchool(newData) {
     })
   }
 
-//   function addASchool(newData) {
-//     fetch(`${apiUrl}/api/schools/add`, {
-//       method: "POST",
-//       headers: {
-//         "Content-type": "application/json; charset=UTF-8",
-//         "Authotisation": `Bearer ${token}`
-//       },
-//       body: JSON.stringify(newData)
-//     })
-//       .then((response) => response.json())
-//       .then((responseJson) => {
-//          reDirect()
-//     })
-// }
-    
-//     function saveToken(token) {
-//       console.log(token)
-//       window.localStorage.setItem("token", token);
-//   }
-
 form.addEventListener("submit", (e) => {
     e.preventDefault();
       
@@ -77,7 +57,7 @@ form.addEventListener("submit", (e) => {
 })
 
 function reDirect() {
-    window.location.href = "aftersignin.html"
+    window.location.href = "schools.html"
     console.log("school added successfully")
 }
 
@@ -86,6 +66,3 @@ function saveToken(token) {
     window.localStorage.setItem("token", token);
 }
   
-//   function getToken() {
-//     return window.localStorage.getItem("token");
-// }

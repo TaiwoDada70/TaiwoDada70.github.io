@@ -18,26 +18,17 @@ function renderData(schools) {
       (school, i) =>
         `<div class="col">
         <div class="card shadow-sm">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Student_icon.svg/1024px-Student_icon.svg.png"></img>
+          <img class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src = "http://www.universityaffairs.ca/wp-content/uploads/2017/07/FNUniv.jpg"></img>
 
           <div class="card-body">
             <li class = "university">${school.name}</li>
-            <li class = "country">${school.country}</li>
-            <li class = "city">${school.city}</li>
-            <li class = "country">${school.address}</li>
-            <li class = "country">${school.type}</li>
-            <li class = "country">${school.tuition_fee_range}</li>
-            <li class = "country">${school.ownership}</li>
-            <li class = "country">${school.founded}</li>
-            <li class = "country">${school.total_enrollment}</li>
-            <li class="card-text">${school.short_desc}</li>
+            ${school.name} is located in ${school.address}, ${school.city}, ${school.country}.
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" onclick = "getASchool(${school.id})" class="btn btn-sm btn-outline-secondary"> <a href="getASchool.html">More info</a></button>
-                <button type="submit" onclick = "updateASchool(${school.id})" class="btn btn-sm btn-outline-secondary"><a href="updateASchool.html">Update</a></button>
+                <a href="school.html?id=${school.id}" class="btn btn-sm btn-outline-secondary">More info</a>
+                <a href="updateASchool.html?id=${school.id}" class="btn btn-sm btn-outline-secondary">Update</a>
                 <button type="button" onclick = "deleteASchool(${school.id})" class="btn btn-sm btn-outline-secondary">Delete</button>
               </div>
-              <small class="text-muted">9 mins</small>
             </div>
           </div>
         </div>
@@ -47,6 +38,18 @@ function renderData(schools) {
 
   schoolsList.innerHTML = list;
 }
+
+{/* <li class = "country">${school.country}</li>
+            <li class = "city">${school.city}</li>
+            <li class = "country">${school.address}</li>
+            <li class = "country">${school.type}</li>
+            <li class = "country">${school.tuition_fee_range}</li>
+            <li class = "country">${school.ownership}</li>
+            <li class = "country">${school.founded}</li>
+            <li class = "country">${school.total_enrollment}</li>
+            <li class="card-text">${school.short_desc}</li> */}
+
+            //<small class="text-muted">9 mins</small>
 
 const deleteASchool = (id) => {
   const token = window.localStorage.getItem('token')

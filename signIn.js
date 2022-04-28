@@ -35,7 +35,7 @@ function signIn(userData) {
 }
 
   function reDirectSignIn() {
-    window.location.href = "aftersignin.html"
+    window.location.href = "schools.html"
   }
   
   form.addEventListener("submit", (e) => {
